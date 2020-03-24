@@ -19,12 +19,24 @@ export default [
     component: () => import('../views/error_404.vue')
   },
   {
+    path: '/echarts',
+    name: 'echarts',
+    component: CommonPage,
+    children: [
+      {
+        path: '/homePage',
+        name: '折线图',
+        component: () => import('../views/testEcharts.vue')
+      }
+    ]
+  },
+  {
     path: '/hh',
     name: 'jsX',
     component: CommonPage,
     children: [
       {
-        path: '/homePage',
+        path: '/jsx',
         name: 'jsX',
         component: () => import('../views/jsx.vue'),
         children: [

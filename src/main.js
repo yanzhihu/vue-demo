@@ -8,7 +8,9 @@ import store from './store'
 import axios from './api/axios'
 import Mock from '@/mock'
 import 'iview/dist/styles/iview.css';
+import echarts from 'echarts'
 
+Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 Vue.use(iView);    
 Vue.component('runoob', {
